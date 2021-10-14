@@ -15,7 +15,8 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
-    "redux": "^4.1.1"
+    "redux": "^4.1.1",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@types/node": "^16.10.9",
@@ -43,5 +44,8 @@
     "webpack-merge": "^5.8.0",
     "webpack-nano": "^1.1.1",
     "workbox-webpack-plugin": "^6.3.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
