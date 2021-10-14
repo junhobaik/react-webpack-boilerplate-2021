@@ -3,6 +3,10 @@
     "jsx": "react",
     "module": "commonjs",
     "target": "es5",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@/*": ["./*"]
+    }
   }
 }

@@ -47,6 +47,9 @@ const config = {
     ],
   },
   resolve: {
+    alias: {
+      "@": commonPaths.appEntry,
+    },
     extensions: [".tsx", ".ts", ".js"],
   },
 };
