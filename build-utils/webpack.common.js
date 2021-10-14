@@ -3,8 +3,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const createStyledComponentsTransformer =
+  require("typescript-plugin-styled-components").default;
 const commonPaths = require("./common-paths");
 
+const styledComponentsTransformer = createStyledComponentsTransformer();
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = isProduction
@@ -30,6 +33,11 @@ const config = {
       {
         test: /\.(ts|tsx)$/i,
         loader: "ts-loader",
+        options: {
+          getCustomTransformers: () => ({
+            before: [styledComponentsTransformer],
+          }),
+        },
         exclude: ["/node_modules/"],
       },
       {
